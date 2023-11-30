@@ -3,11 +3,14 @@ import { useAuthContext } from "@asgardeo/auth-react";
 
 const Auth = () => {
 
-  const { state: { isAuthenticated, isLoading }, signIn } = useAuthContext();
+  const { state: { isAuthenticated, isLoading }, signIn, signOut } = useAuthContext();
 
   if(isAuthenticated){
     return (
+      <>
       <div className='content'>Authenticated</div>
+      <button onClick={() => signOut()}>SignIn</button>
+      </>
     );
   }else{
     return (
