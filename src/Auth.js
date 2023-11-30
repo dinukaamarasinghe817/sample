@@ -3,7 +3,7 @@ import { useAuthContext } from "@asgardeo/auth-react";
 
 const Auth = () => {
 
-  const { state: { isAuthenticated, isLoading }, signIn, signOut } = useAuthContext();
+  const { state: { isAuthenticated }, signOut } = useAuthContext();
 
   if(isAuthenticated){
     return (
