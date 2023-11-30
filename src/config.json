@@ -1,0 +1,12 @@
+{
+    "clientID": "NQ2bVTYcE49Y7E6SQM1n_58W3hwa",
+    "baseUrl": "https://api.asgardeo.io/t/dinukawso2",
+    "signInRedirectURL": "https://localhost:3000/auth",
+    "signOutRedirectURL": "https://localhost:3000",
+    "scope": ["openid","email","profile"],
+    "stsConfig": {
+        "client_id": "LV38z4Rwc0KaWE8CpW1BdYmFhhFNlzjvwYO0ovpjGS0a",
+        "orgHandle": "<Choreo Tenant>"
+    },
+    "stsTokenEndpoint": "https://api.asgardeo.io/t/dinukawso2/oauth2/token"
+}
