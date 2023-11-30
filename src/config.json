@@ -1,11 +1,7 @@
 {
-    "clientID": "NQ2bVTYcE49Y7E6SQM1n_58W3hwa",
+    "clientID": "4hrk51q5NtIubeYwFn2_yFgqPcEa",
     "baseUrl": "https://api.asgardeo.io/t/dinukawso2",
     "signInRedirectURL": "https://dbab8129-aba3-4a66-a151-bb6fb5dcd053.e1-us-east-azure.choreoapps.dev/auth",
     "signOutRedirectURL": "https://dbab8129-aba3-4a66-a151-bb6fb5dcd053.e1-us-east-azure.choreoapps.dev",
-    "scope": ["openid","email","profile"],
-    "stsConfig": {
-        "client_id": "LV38z4Rwc0KaWE8CpW1BdYmFhhFNlzjvwYO0ovpjGS0a"
-    },
-    "stsTokenEndpoint": "https://api.asgardeo.io/t/dinukawso2/oauth2/token"
+    "scope": ["openid","email","profile"]
 }
