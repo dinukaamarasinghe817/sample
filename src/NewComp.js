@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuthContext } from "@asgardeo/auth-react";
 
 const NewComp = () => {
-  const { getDecodedIDToken, signOut } = useAuthContext();
+  const { state, getDecodedIDToken, signOut } = useAuthContext();
   // console.log(getDecodedIDToken);
 
   async function getToken(){
