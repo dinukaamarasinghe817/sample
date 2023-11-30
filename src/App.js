@@ -3,6 +3,7 @@ import {Route, Routes} from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Auth from './Auth';
+import Next from './Next';
 
 function App() {
   return (
