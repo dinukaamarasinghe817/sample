@@ -1,5 +1,5 @@
 # Build stage
-FROM node:17-alpine as builder
+FROM node:20-alpine as builder
 
 WORKDIR /app
 
@@ -14,9 +14,9 @@ RUN npm run build
 # Production stage
 FROM nginx:1.19.0
 
-# Create a non-root user
-RUN addgroup -g 1001 -S appuser && \
-    adduser -u 1001 -S appuser -G appuser
+# Create a non-root user with UID and GID between 10000 and 20000
+RUN addgroup -g 10001 -S appuser && \
+    adduser -u 10001 -S appuser -G appuser
 
 # Set the working directory in the container
 WORKDIR /usr/share/nginx/html
