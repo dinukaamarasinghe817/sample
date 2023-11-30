@@ -3,12 +3,13 @@ import { useAuthContext } from "@asgardeo/auth-react";
 
 const Auth = () => {
 
-  const { getDecodedIDToken, signOut } = useAuthContext();
+  const { state, getDecodedIDToken, signOut } = useAuthContext();
   // console.log(getDecodedIDToken);
 
   async function getToken(){
     const decodedIDToken = await getDecodedIDToken();
     console.log(decodedIDToken);
+    console.log(state);
   }
 
   getToken();

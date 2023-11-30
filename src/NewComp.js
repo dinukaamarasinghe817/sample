@@ -8,6 +8,7 @@ const NewComp = () => {
   async function getToken(){
     const decodedIDToken = await getDecodedIDToken();
     console.log(decodedIDToken);
+    console.log(state);
   }
 
   getToken();
