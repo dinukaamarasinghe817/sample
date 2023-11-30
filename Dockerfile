@@ -8,10 +8,14 @@ RUN npm install
 
 COPY . .
 
-RUN chown -R 10014:10014 /app
+# Create a non-root user with UID 10014
+RUN adduser -D -u 10014 myuser
 
-USER 10014
+# Give ownership of the app directory to the non-root user
+RUN chown -R myuser:myuser /app
+
+USER myuser
 
 EXPOSE 3000
 
-CMD ["sudo", "npm", "start"]
+CMD ["npm", "start"]
