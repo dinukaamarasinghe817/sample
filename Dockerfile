@@ -47,4 +47,4 @@ EXPOSE 3000
 # Define environment variables if needed (e.g., REACT_APP_API_URL)
 
 # Start the application
-CMD ["npx", "serve", "-s", "build", "-l", "3000"]
+CMD ["gosu", "npx", "serve", "-s", "build", "-l", "3000"]
