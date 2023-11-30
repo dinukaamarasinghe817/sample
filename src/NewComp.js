@@ -6,9 +6,11 @@ const NewComp = () => {
   // console.log(getDecodedIDToken);
 
   async function getToken(){
-    const decodedIDToken = await getDecodedIDToken();
-    console.log(decodedIDToken);
-    console.log(state);
+    getDecodedIDToken().then((res) => {
+      console.log(res);
+      console.log("here is the state variable");
+      console.log(state);
+    })
   }
 
   getToken();

@@ -7,9 +7,9 @@ const Auth = () => {
   // console.log(getDecodedIDToken);
 
   async function getToken(){
-    const decodedIDToken = await getDecodedIDToken();
-    console.log(decodedIDToken);
-    console.log(state);
+    getDecodedIDToken().then((res) => {
+      console.log(res);
+    })
   }
 
   getToken();
