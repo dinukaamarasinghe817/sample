@@ -8,11 +8,9 @@ RUN npm install
 
 COPY . .
 
-RUN adduser -D -u 10014 myuser
+RUN chown -R 10014:10014 /app
 
-RUN chown -R myuser:myuser /app
-
-USER myuser
+USER 10014
 
 EXPOSE 3000
 
