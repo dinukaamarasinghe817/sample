@@ -12,7 +12,7 @@ const Home = () => {
     console.log('basic information');
     console.log(basicUserInfo);
     console.log('id token');
-    console.log(getDecodedIDPIDToken);
+    console.log(idpidToken);
   }
 
   getData();
