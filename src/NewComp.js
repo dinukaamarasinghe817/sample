@@ -1,37 +1,18 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useAuthContext } from "@asgardeo/auth-react";
 
 const NewComp = () => {
-  const { state, getDecodedIDToken, getBasicUserInfo, signOut } = useAuthContext();
-  // console.log(getDecodedIDToken);
+  const { state } = useAuthContext();
 
-  async function getToken(){
-    getDecodedIDToken().then((res) => {
-      console.log(res);
-      console.log("here is the state variable");
-      console.log(state);
-    })
+  useEffect(() => {
     
-    getBasicUserInfo().then((basicUserDetails) => {
-      console.log(basicUserDetails);
-      console.log(state);
-    })
-  }
+    if(state.isAuthenticated){
+      console.log("authenticated");
+    }else{
+      console.log('not authenticated');
+    }
 
-  getToken();
-
-  // if(getDecodedIDToken){
-  //   return (
-  //     <>
-  //     <div className='content'>Authenticated</div>
-  //     <button onClick={() => signOut()}>SignIn</button>
-  //     </>
-  //   );
-  // }else{
-  //   return (
-  //     <div className='content'>Not Authenticated</div>
-  //   );
-  // }
+  }, [state.isAuthenticated]);
 }
 
-export default NewComp
+export default NewComp;

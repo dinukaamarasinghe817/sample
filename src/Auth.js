@@ -1,18 +1,17 @@
-import React from 'react';
-import { useAuthContext } from "@asgardeo/auth-react";
+// import { useAuthContext } from "@asgardeo/auth-react";
 
 const Auth = () => {
 
-  const { state, getDecodedIDToken, signOut } = useAuthContext();
-  // console.log(getDecodedIDToken);
+  // const { getDecodedIDToken } = useAuthContext();
+  // // console.log(getDecodedIDToken);
 
-  async function getToken(){
-    getDecodedIDToken().then((res) => {
-      console.log(res);
-    })
-  }
+  // async function getToken(){
+  //   getDecodedIDToken().then((res) => {
+  //     console.log(res);
+  //   })
+  // }
 
-  getToken();
+  // getToken();
 
   // if(getDecodedIDToken){
   //   return (
