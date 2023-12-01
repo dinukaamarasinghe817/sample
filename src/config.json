@@ -3,9 +3,6 @@
     "baseUrl": "https://api.asgardeo.io/t/dinukawso2",
     "signInRedirectURL": "https://dbab8129-aba3-4a66-a151-bb6fb5dcd053.e1-us-east-azure.choreoapps.dev",
     "signOutRedirectURL": "https://dbab8129-aba3-4a66-a151-bb6fb5dcd053.e1-us-east-azure.choreoapps.dev",
-    "scope": ["openid","email","profile"],
-    "stsConfig": {
-        "client_id": "52LIoht53NtB4jOEE7Bfb08NPWga"
-    },
-    "stsTokenEndpoint": "https://sts.choreo.dev/oauth2/token"
+    "scope": ["openid","email","profile"]
+    
 }

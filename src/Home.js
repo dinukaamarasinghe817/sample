@@ -2,9 +2,20 @@ import React from 'react';
 import { useAuthContext } from "@asgardeo/auth-react";
 
 const Home = () => {
-  const { state , signIn, signOut } = useAuthContext();
+  const { state , signIn, signOut, getBasicUserInfo,  getDecodedIDPIDToken } = useAuthContext();
 
-  const { isAuthenticated } = state;
+  const { isAuthenticated, getDecodedIDToken } = state;
+
+  async function getData(){
+    const basicUserInfo = await getBasicUserInfo();
+    const idpidToken = await getDecodedIDPIDToken();
+    console.log('basic information');
+    console.log(basicUserInfo);
+    console.log('id token');
+    console.log(getDecodedIDPIDToken);
+  }
+
+  getData();
 
   if (!isAuthenticated) {
     console.log(state);
